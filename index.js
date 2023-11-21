@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var randomDiceImage = "dice" + randomNumber1 + ".png";
 
   // Construct the complete path for the image source for Player 1
-  var randomImageSource = "images/" + randomDiceImage;
+  var randomImageSource = "dice" + randomDiceImage;
 
   // Select the first image element
   var image1 = document.querySelectorAll("img")[0];
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
   // Create the filename for the corresponding dice image for Player 2
-  var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
+  var randomImageSource2 = "dice" + randomNumber2 + ".png";
 
   // Select the second image element
   var image2 = document.querySelectorAll("img")[1];
