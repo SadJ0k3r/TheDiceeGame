@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -7,19 +7,21 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
   <style>
-    /* Add styles for the "Refresh Me" text */
+    /* Styles for the "Refresh Me" text */
     h1 {
-      color: #333; /* Set the color to a dark shade, adjust as needed */
-      font-size: 24px; /* Set the font size, adjust as needed */
-      text-align: center; /* Center the text */
+      color: #333;
+      font-size: 24px;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
-  <h1>Refresh Me</h1>
-  <div class="container">
+  <header>
+    <h1>Refresh Me</h1>
+  </header>
 
+  <div class="container">
     <!-- Player 1 dice -->
     <div class="dice">
       <p>Player 1</p>
@@ -33,17 +35,14 @@
       <!-- Check the relative path to the image -->
       <img class="img2" src="dice5.png" alt="Player 2 Dice">
     </div>
-
   </div>
 
   <!-- Script with defer attribute -->
   <script src="index.js" charset="utf-8" defer></script>
 
-  <!-- Footer inside the body, wrapped in a footer tag -->
   <footer>
     🎲 SoftwareGardenBlog 🎲
   </footer>
-
 </body>
 
 </html>
