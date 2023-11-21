@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var randomNumber1 = Math.floor(Math.random() * 6) + 1;
 
   // Create the filename for the corresponding dice image for Player 1
-  var randomDiceImage = "dice6" + randomNumber1 + ".png";
+  var randomDiceImage = "/dice6" + randomNumber1 + ".png";
 
   // Construct the complete path for the image source for Player 1
   var randomImageSource = "dice6" + randomDiceImage;
