@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
   // Create the filename for the corresponding dice image for Player 2
-  var randomImageSource2 = "dice6" + randomNumber2 + ".png";
+  var randomImageSource2 = "/dice6" + randomNumber2 + ".png";
 
   // Select the second image element
   var image2 = document.querySelectorAll("img")[1];
