@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var randomDiceImage = "/dice6" + randomNumber1 + ".png";
 
   // Construct the complete path for the image source for Player 1
-  var randomImageSource = "dice6" + randomDiceImage;
+  var randomImageSource = "/dice6" + randomDiceImage;
 
   // Select the first image element
   var image1 = document.querySelectorAll("img")[0];
