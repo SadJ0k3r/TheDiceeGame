@@ -1,37 +1,20 @@
-# TheDiceeGame
-/**
- * TheDiceeGame - A Simple Dice Game
- * 
- * This JavaScript program creates a fun and interactive dice game where two players roll a dice to determine the winner.
- * It uses the Math.random() function to generate random numbers representing dice rolls and dynamically updates the web page based on the results.
- * 
- * How it works:
- * - When the web page loads, the script waits for the DOM to be fully loaded.
- * - It then generates two random numbers between 1 and 6, one for each player.
- * - Based on these numbers, it selects the corresponding dice images and updates the image elements on the page.
- * - The script checks if the image elements exist before attempting to set their source attributes.
- * - It determines the winner by comparing the two random numbers and updates the page's heading with the result.
- * - If there's a draw, it displays a draw message.
- * 
- * MIT License:
- * 
- * Copyright (c) 2023 SadJ0k3r
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
-   
+# Gamified Web Design Practice
+
+## Overview
+- **Gamified Learning**: Engage in web design practice with a fun, game-like experience.
+- **Math & JavaScript**: Enhance your skills by using mathematics and JavaScript to create dynamic web designs.
+
+## Installation
+- **Clone Repository**: Use `git clone` followed by the repository URL to clone the project.
+- **Install Dependencies**: Run `npm install` to install the necessary dependencies.
+
+## Usage
+- **Start Development Server**: Execute `npm start` to launch the development server.
+- **Access Application**: Open your web browser and navigate to `localhost:3000` to start designing.
+
+## Contributing
+- **Fork & Pull**: Fork the repository, make changes, and submit a pull request for review.
+- **Issue Tracking**: Report issues or suggest enhancements through the issue tracker.
+
+## License
+- **Open Source**: This project is open source and available under the MIT License.
