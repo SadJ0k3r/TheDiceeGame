@@ -1,46 +1,195 @@
-/* Styles for the container that holds the content */
-.container {
-  width: 70%; /* Set container width to 70% of the parent element */
-  margin: auto; /* Center the container horizontally */
-  text-align: center; /* Center the text inside the container */
+/* =============================================
+   TheDiceeGame - Creative CSS Styles 🎲🎮
+   Roll, Play, Win!
+   ============================================= */
+
+/* === CSS Variables === */
+:root {
+  --bg-dark:    #1a1a2e;
+  --bg-mid:     #16213e;
+  --bg-card:    #0f3460;
+  --accent:     #e94560;
+  --gold:       #ffd700;
+  --text-light: #eaeaea;
+  --text-dim:   #9eadbd;
+  --shadow:     0 8px 32px rgba(233, 69, 96, 0.3);
 }
 
-/* Styles for the dice elements */
-.dice {
-  text-align: center; /* Center the text inside the dice element */
-  display: inline-block; /* Make the dice elements appear in a line */
+/* === Global Reset & Base === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Overall styles for the body of the document */
 body {
-  background-color: #393E46; /* Set the background color of the body */
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-mid) 50%, #0d1b2a 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Indie Flower', cursive;
+  color: var(--text-light);
+  overflow-x: hidden;
 }
 
-/* Styles for the main heading (h1) element */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(233,69,96,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(78,46,145,0.12) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === Main Container === */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* === Main Heading === */
 h1 {
-  margin: 30px; /* Add margin around the heading */
-  font-family: 'Lobster', cursive; /* Set the font family for the heading */
-  text-shadow: 5px 0 #232931; /* Add a text shadow to the heading */
-  font-size: 8rem; /* Set the font size of the heading */
-  color: #4ECCA3; /* Set the text color of the heading */
+  margin: 20px auto 10px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 3px 4px 0px #232931, 0 0 30px rgba(255,215,0,0.4);
+  font-size: 4.5rem;
+  color: var(--gold);
+  letter-spacing: 2px;
+  animation: glow 2.5s ease-in-out infinite alternate;
 }
 
-/* Styles for paragraphs (p) */
+/* === Subtitle === */
+.subtitle {
+  font-size: 1.4rem;
+  color: var(--text-dim);
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* === Dice Wrapper === */
+.dice {
+  text-align: center;
+  display: inline-block;
+  margin: 20px 40px;
+  vertical-align: top;
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  padding: 20px 30px;
+  border: 2px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.7s ease forwards;
+}
+
+.dice:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(233, 69, 96, 0.35);
+  border-color: rgba(233,69,96,0.4);
+}
+
+.dice p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--text-light);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+/* === Dice Images === */
+.img1, .img2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.5));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.img1:hover, .img2:hover {
+  transform: rotate(8deg) scale(1.1);
+  filter: drop-shadow(0 8px 24px rgba(233,69,96,0.6));
+}
+
+/* === VS Badge === */
+.vs-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 20px 10px;
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  color: var(--accent);
+  text-shadow: 2px 2px 8px rgba(233,69,96,0.6);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* === Paragraphs === */
 p {
-  font-size: 2rem; /* Set the font size for paragraphs */
-  color: #4ECCA3; /* Set the text color for paragraphs */
-  font-family: 'Indie Flower', cursive; /* Set the font family for paragraphs */
+  font-size: 1.6rem;
+  color: var(--text-light);
+  font-family: 'Indie Flower', cursive;
+  margin: 8px 0;
 }
 
-/* Styles for images */
-img {
-  width: 80%; /* Set the width of images to 80% of the parent element */
+/* === Refresh hint === */
+.refresh-hint {
+  font-size: 1.3rem;
+  color: var(--text-dim);
+  margin-top: 30px;
+  opacity: 0.7;
+  letter-spacing: 1px;
 }
 
-/* Styles for the footer */
+/* === Footer === */
 footer {
-  margin-top: 5%; /* Add top margin to the footer */
-  color: #EEEEEE; /* Set the text color of the footer */
-  text-align: center; /* Center the text inside the footer */
-  font-family: 'Indie Flower', cursive; /* Set the font family for the footer */
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+  font-family: 'Lobster', cursive;
+  color: var(--text-dim);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* === Animations === */
+@keyframes glow {
+  from { text-shadow: 3px 4px 0px #232931, 0 0 10px rgba(255,215,0,0.3); }
+  to   { text-shadow: 3px 4px 0px #232931, 0 0 40px rgba(255,215,0,0.8), 0 0 80px rgba(255,215,0,0.3); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1);     opacity: 1; }
+  50%       { transform: scale(1.15); opacity: 0.8; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  h1 { font-size: 3rem; }
+  .dice { margin: 10px; }
+  .img1, .img2 { width: 100px; height: 100px; }
+  .container { width: 95%; }
 }
