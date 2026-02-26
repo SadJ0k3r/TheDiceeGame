@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Dicee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🎲 Dicee - Roll the Dice!</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
 </head>
@@ -11,31 +12,36 @@
 <body>
 
   <div class="container">
-    <h1>Refresh Me!</h1>
 
-    <!-- Player 1 dice -->
+    <!-- 🎲 Game Title -->
+    <h1 id="result-title">🎲 Roll the Dice! 🎲</h1>
+    <p class="subtitle">Refresh to play! 🔄</p>
+
+    <!-- 👤 Player 1 -->
     <div class="dice">
-      <p>Player 1</p>
-      <!-- Check the relative path to the image -->
+      <p>👤 Player 1</p>
       <img class="img1" src="dice5.png" alt="Player 1 Dice">
     </div>
 
-    <!-- Player 2 dice -->
+    <!-- ⚔️ VS Separator -->
+    <div class="vs-badge">⚔️ VS ⚔️</div>
+
+    <!-- 👥 Player 2 -->
     <div class="dice">
-      <p>Player 2</p>
-      <!-- Check the relative path to the image -->
+      <p>👥 Player 2</p>
       <img class="img2" src="dice5.png" alt="Player 2 Dice">
     </div>
 
-    <!-- Include the "Refresh Me" text -->
-    <p>Refresh Me</p>
+    <!-- 🔄 Refresh Hint -->
+    <p class="refresh-hint">🔄 Refresh Me</p>
+
   </div>
 
   <script src="index.js" charset="utf-8"></script>
 
-  <!-- Move the footer inside the body -->
+  <!-- 🐾 Footer -->
   <footer>
-    🎲 SoftwareGardenBlog 🎲
+    <span>🎮</span> SoftwareGardenBlog <span>🎮</span>
   </footer>
 
 </body>
